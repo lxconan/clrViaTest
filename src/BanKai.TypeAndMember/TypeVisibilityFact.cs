@@ -8,8 +8,9 @@ namespace BanKai.TypeAndMember
     {
         private class Sample
         {
-            // ReSharper disable once UnusedField.Compiler
+#pragma warning disable 169
             int field;
+#pragma warning restore 169
         }
 
         private interface ISample
