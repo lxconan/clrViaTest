@@ -49,6 +49,8 @@
     <Compile Include="AssemblyFact.cs" />
     <Compile Include="PartialKeywordFact.cs" />
     <Compile Include="PloymorphismFact.cs" />
+    <Compile Include="ReadonlyFieldFact.cs" />
+    <Compile Include="ReferenceTypeConstructorFact.cs" />
     <Compile Include="TypeVisibilityFact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
