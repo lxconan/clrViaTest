@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyFact.cs" />
+    <Compile Include="TypeConstructorFact.cs" />
     <Compile Include="TypeFundamental.cs" />
     <Compile Include="ReferenceTypes.cs" />
     <Compile Include="PrimitiveTypes.cs" />
