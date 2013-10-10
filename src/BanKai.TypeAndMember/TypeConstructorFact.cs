@@ -25,11 +25,15 @@ namespace BanKai.TypeAndMember
         {
             TypeCtorSample1.Number.Should().Be(default(int));
         }
-
+    
+        // ReSharper disable UnusedMember.Local
         private sealed class TypeCtorSample2
+        // ReSharper restore UnusedMember.Local
         {
             // ReSharper disable MemberCanBePrivate.Local
+            // ReSharper disable NotAccessedField.Local
             public static readonly int Number;
+            // ReSharper restore NotAccessedField.Local
             // ReSharper restore MemberCanBePrivate.Local
 
             static TypeCtorSample2()
@@ -48,7 +52,7 @@ namespace BanKai.TypeAndMember
 
             Debug.Assert(numberField != null);
             var value = (int) numberField.GetValue(null);
-            value.Should().Be(6);
+            value.Should().Be(default(int));
         }
     }
 }
