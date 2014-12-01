@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayOperations.cs" />
+    <Compile Include="Classes.cs" />
     <Compile Include="Common\DefaultValueDemoClass.cs" />
+    <Compile Include="Common\MethodOverloadDemoClass.cs" />
     <Compile Include="Common\RefTypeClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NumberOperations.cs" />

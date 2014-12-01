@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Linq;
+﻿using System.Linq;
 using BanKai.Basic.Common;
 using FluentAssertions;
 using Xunit;
