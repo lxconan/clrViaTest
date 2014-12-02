@@ -17,9 +17,9 @@
             return "Foo(object)";
         }
 
-        public string Foo(string a)
+        public string Foo(long a)
         {
-            return "Foo(string)";
+            return "Foo(long)";
         }
     }
 }
