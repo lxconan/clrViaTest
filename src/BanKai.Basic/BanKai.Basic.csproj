@@ -48,14 +48,23 @@
   <ItemGroup>
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="Classes.cs" />
+    <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\ConstructorOverloadingDemoClass.cs" />
+    <Compile Include="Common\CustomizePropertyDemoClass.cs" />
     <Compile Include="Common\DefaultValueDemoClass.cs" />
+    <Compile Include="Common\DisposableDemoClass.cs" />
     <Compile Include="Common\ImplicitConstructorClassDemo.cs" />
+    <Compile Include="Common\IndexerDemoClass.cs" />
+    <Compile Include="Common\InheritMemberAccessDemoClass.cs" />
     <Compile Include="Common\MethodOverloadDemoClass.cs" />
     <Compile Include="Common\ObjectInitializerDemoClass.cs" />
     <Compile Include="Common\ParameterizedConstructorClassDemo.cs" />
+    <Compile Include="Common\PartialClassDemoClass.cs" />
+    <Compile Include="Common\PolymorphismDemoClass.cs" />
     <Compile Include="Common\RefTypeClass.cs" />
+    <Compile Include="Common\StaticConstructorDemoClass.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Inheritance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NumberOperations.cs" />
     <Compile Include="StringAndCharOperations.cs" />
