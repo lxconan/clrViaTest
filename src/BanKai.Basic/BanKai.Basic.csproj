@@ -49,12 +49,15 @@
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
+    <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\ConstructorOverloadingDemoClass.cs" />
     <Compile Include="Common\CustomizePropertyDemoClass.cs" />
     <Compile Include="Common\DefaultValueDemoClass.cs" />
     <Compile Include="Common\DisposableDemoClass.cs" />
+    <Compile Include="Common\HideMemberDemoClass.cs" />
     <Compile Include="Common\ImplicitConstructorClassDemo.cs" />
     <Compile Include="Common\IndexerDemoClass.cs" />
+    <Compile Include="Common\InheritanceConstructorCallDemoClass.cs" />
     <Compile Include="Common\InheritMemberAccessDemoClass.cs" />
     <Compile Include="Common\MethodOverloadDemoClass.cs" />
     <Compile Include="Common\ObjectInitializerDemoClass.cs" />

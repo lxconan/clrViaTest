@@ -1,6 +1,14 @@
 ﻿namespace BanKai.Basic.Common
 {
-    public class MethodOverloadDemoClass
+    internal class MethodOverloadBaseClass
+    {
+    }
+
+    internal class MethodOverloadDerivedClass : MethodOverloadBaseClass
+    {
+    }
+
+    internal class MethodOverloadDemoClass
     {
         public string Foo()
         {
@@ -20,6 +28,16 @@
         public string Foo(long a)
         {
             return "Foo(long)";
+        }
+
+        public string Foo(MethodOverloadBaseClass baseClassObject)
+        {
+            return "Foo(MethodOverloadBaseClass)";
+        }
+
+        public string Foo(MethodOverloadDerivedClass baseClassObject)
+        {
+            return "Foo(MethodOverloadBaseClass)";
         }
     }
 }
