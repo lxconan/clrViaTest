@@ -29,5 +29,30 @@ namespace BanKai.Basic.Extensions
 
             return constructorInfo != null;
         }
+
+        public static bool HasInstanceMethod(this object instance, string methodName, Type[] argumentTypes)
+        {
+            if (instance == null)
+            {
+                throw new ArgumentNullException("instance");
+            }
+
+            Type type = instance.GetType();
+
+            const BindingFlags bindingFlags =
+                BindingFlags.InvokeMethod |
+                BindingFlags.Instance |
+                BindingFlags.Public |
+                BindingFlags.NonPublic;
+
+            MethodInfo methodInfo = type.GetMethod(
+                methodName,
+                bindingFlags,
+                null,
+                argumentTypes,
+                null);
+
+            return methodInfo != null;
+        }
     }
 }
