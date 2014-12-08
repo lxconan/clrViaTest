@@ -54,5 +54,25 @@ namespace BanKai.Basic.Extensions
 
             return methodInfo != null;
         }
+
+        public static Type GetPropertyType(this object instance, string propertyName)
+        {
+            if (instance == null)
+            {
+                throw new ArgumentNullException("instance");
+            }
+
+            Type type = instance.GetType();
+
+            const BindingFlags bindingFlags =
+                BindingFlags.GetProperty |
+                BindingFlags.Instance |
+                BindingFlags.Public |
+                BindingFlags.NonPublic;
+
+            PropertyInfo propertyInfo = type.GetProperty(propertyName, bindingFlags);
+
+            return propertyInfo.PropertyType;
+        }
     }
 }
