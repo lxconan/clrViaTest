@@ -84,6 +84,7 @@
     <Compile Include="Common\ValueTypeDemoClass.cs" />
     <Compile Include="DelegatesRelated.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="EventsRelated.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="GenericsRelated.cs" />
     <Compile Include="Inheritance.cs" />
