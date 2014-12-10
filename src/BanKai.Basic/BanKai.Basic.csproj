@@ -56,12 +56,17 @@
     <Compile Include="Common\CovariantContravariantDemoClass.cs" />
     <Compile Include="Common\CustomizePropertyDemoClass.cs" />
     <Compile Include="Common\DefaultValueDemoClass.cs" />
+    <Compile Include="Common\DelegateTypeVarianceDemoClass.cs" />
+    <Compile Include="Common\DelegatesDemo.cs" />
+    <Compile Include="Common\DelegateSubtractionDemoClass.cs" />
     <Compile Include="Common\DisposableDemoClass.cs" />
     <Compile Include="Common\EnumDemo.cs" />
     <Compile Include="Common\ExplicitInterfaceImplDemo.cs" />
     <Compile Include="Common\GenericMethodDemoClass.cs" />
     <Compile Include="Common\GenericTypeStaticDataDemoClass.cs" />
     <Compile Include="Common\HideMemberDemoClass.cs" />
+    <Compile Include="Common\MulticastDelegateDemoClass.cs" />
+    <Compile Include="Common\MulticastFuncDelegateDemoClass.cs" />
     <Compile Include="Common\MultipleInterfaceImplDemo.cs" />
     <Compile Include="Common\ImplicitConstructorClassDemo.cs" />
     <Compile Include="Common\IndexerDemoClass.cs" />
@@ -77,6 +82,7 @@
     <Compile Include="Common\RestrictedGenericDemoClasses.cs" />
     <Compile Include="Common\StaticConstructorDemoClass.cs" />
     <Compile Include="Common\ValueTypeDemoClass.cs" />
+    <Compile Include="DelegatesRelated.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="GenericsRelated.cs" />
