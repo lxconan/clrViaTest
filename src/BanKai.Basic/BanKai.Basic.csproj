@@ -51,9 +51,12 @@
     <Compile Include="05_Classes.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
+    <Compile Include="Common\BasicEventDemoClass.cs" />
     <Compile Include="Common\BasicGenericDemoClass.cs" />
     <Compile Include="Common\ConstructorOverloadingDemoClass.cs" />
     <Compile Include="Common\CovariantContravariantDemoClass.cs" />
+    <Compile Include="Common\CustomizeEventAccessorDemoClass.cs" />
+    <Compile Include="Common\CustomizeEventArgsDemoClass.cs" />
     <Compile Include="Common\CustomizePropertyDemoClass.cs" />
     <Compile Include="Common\DefaultValueDemoClass.cs" />
     <Compile Include="Common\DelegateTypeVarianceDemoClass.cs" />
@@ -84,7 +87,7 @@
     <Compile Include="Common\ValueTypeDemoClass.cs" />
     <Compile Include="13_DelegatesRelated.cs" />
     <Compile Include="11_Enums.cs" />
-    <Compile Include="14_EventsRelated.cs" />
+    <Compile Include="15_EventsRelated.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="12_GenericsRelated.cs" />
     <Compile Include="06_Inheritance.cs" />
