@@ -47,8 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayOperations.cs" />
-    <Compile Include="Classes.cs" />
+    <Compile Include="03_ArrayOperations.cs" />
+    <Compile Include="05_Classes.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicGenericDemoClass.cs" />
@@ -82,19 +82,19 @@
     <Compile Include="Common\RestrictedGenericDemoClasses.cs" />
     <Compile Include="Common\StaticConstructorDemoClass.cs" />
     <Compile Include="Common\ValueTypeDemoClass.cs" />
-    <Compile Include="DelegatesRelated.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="EventsRelated.cs" />
+    <Compile Include="13_DelegatesRelated.cs" />
+    <Compile Include="11_Enums.cs" />
+    <Compile Include="14_EventsRelated.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
-    <Compile Include="GenericsRelated.cs" />
-    <Compile Include="Inheritance.cs" />
-    <Compile Include="Interfaces.cs" />
-    <Compile Include="NestedTypes.cs" />
-    <Compile Include="ObjectTypes.cs" />
+    <Compile Include="12_GenericsRelated.cs" />
+    <Compile Include="06_Inheritance.cs" />
+    <Compile Include="07_Interfaces.cs" />
+    <Compile Include="10_NestedTypes.cs" />
+    <Compile Include="08_ObjectTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NumberOperations.cs" />
-    <Compile Include="StringAndCharOperations.cs" />
-    <Compile Include="VariablesAndParameters.cs" />
+    <Compile Include="01_NumberOperations.cs" />
+    <Compile Include="02_StringAndCharOperations.cs" />
+    <Compile Include="04_VariablesAndParameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
