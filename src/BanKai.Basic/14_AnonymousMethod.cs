@@ -5,7 +5,7 @@ namespace BanKai.Basic
 {
     // ReSharper disable ConvertToLambdaExpression
 
-    public class AnonymousMethodAndLambda
+    public class AnonymousMethod
     {
         [Fact]
         public void should_write_anonymous_inplace()

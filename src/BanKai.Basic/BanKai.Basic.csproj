@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="03_ArrayOperations.cs" />
     <Compile Include="05_Classes.cs" />
-    <Compile Include="14_AnonymousMethodAndLambda.cs" />
+    <Compile Include="14_AnonymousMethod.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicEventDemoClass.cs" />
