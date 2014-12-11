@@ -50,6 +50,8 @@
     <Compile Include="03_ArrayOperations.cs" />
     <Compile Include="05_Classes.cs" />
     <Compile Include="14_AnonymousMethod.cs" />
+    <Compile Include="15_Closure.cs" />
+    <Compile Include="18_Disposable.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicEventDemoClass.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Common\DelegatesDemo.cs" />
     <Compile Include="Common\DelegateSubtractionDemoClass.cs" />
     <Compile Include="Common\DisposableDemoClass.cs" />
+    <Compile Include="Common\DisposableWithTracingDemoClass.cs" />
     <Compile Include="Common\EnumDemo.cs" />
     <Compile Include="Common\ExplicitInterfaceImplDemo.cs" />
     <Compile Include="Common\GenericMethodDemoClass.cs" />
@@ -85,10 +88,11 @@
     <Compile Include="Common\RefTypeClass.cs" />
     <Compile Include="Common\RestrictedGenericDemoClasses.cs" />
     <Compile Include="Common\StaticConstructorDemoClass.cs" />
+    <Compile Include="Common\TryCatchDemoClass.cs" />
     <Compile Include="Common\ValueTypeDemoClass.cs" />
     <Compile Include="13_DelegatesRelated.cs" />
     <Compile Include="11_Enums.cs" />
-    <Compile Include="15_EventsRelated.cs" />
+    <Compile Include="16_EventsRelated.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="12_GenericsRelated.cs" />
     <Compile Include="06_Inheritance.cs" />
@@ -99,6 +103,7 @@
     <Compile Include="01_NumberOperations.cs" />
     <Compile Include="02_StringAndCharOperations.cs" />
     <Compile Include="04_VariablesAndParameters.cs" />
+    <Compile Include="17_TryStatement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
