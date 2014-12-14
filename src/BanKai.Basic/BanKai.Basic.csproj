@@ -53,6 +53,7 @@
     <Compile Include="15_Closure.cs" />
     <Compile Include="18_Disposable.cs" />
     <Compile Include="19_Enumeration.cs" />
+    <Compile Include="20_NullableTypes.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicEventDemoClass.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="11_Enums.cs" />
     <Compile Include="16_EventsRelated.cs" />
     <Compile Include="Extensions\DelegateRunner.cs" />
+    <Compile Include="Extensions\SimpleCSharpCompiler.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="12_GenericsRelated.cs" />
     <Compile Include="06_Inheritance.cs" />
