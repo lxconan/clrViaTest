@@ -55,12 +55,15 @@
     <Compile Include="19_Enumeration.cs" />
     <Compile Include="20_NullableTypes.cs" />
     <Compile Include="21_ImplicitAndExplicitConversions.cs" />
+    <Compile Include="22_ExtensionMethod.cs" />
+    <Compile Include="23_AnonymousTypes.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicEventDemoClass.cs" />
     <Compile Include="Common\BasicGenericDemoClass.cs" />
     <Compile Include="Common\ConstructorOverloadingDemoClass.cs" />
     <Compile Include="Common\CovariantContravariantDemoClass.cs" />
+    <Compile Include="Common\CustomConversionDemoClass.cs" />
     <Compile Include="Common\CustomizeEventAccessorDemoClass.cs" />
     <Compile Include="Common\CustomizeEventArgsDemoClass.cs" />
     <Compile Include="Common\CustomizePropertyDemoClass.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="Common\DisposableWithTracingDemoClass.cs" />
     <Compile Include="Common\EnumDemo.cs" />
     <Compile Include="Common\ExplicitInterfaceImplDemo.cs" />
+    <Compile Include="Common\ExtensionMethodDemoClass.cs" />
     <Compile Include="Common\GenericMethodDemoClass.cs" />
     <Compile Include="Common\GenericTypeStaticDataDemoClass.cs" />
     <Compile Include="Common\HideMemberDemoClass.cs" />
