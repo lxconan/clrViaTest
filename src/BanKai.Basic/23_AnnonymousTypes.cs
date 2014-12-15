@@ -2,12 +2,12 @@
 
 namespace BanKai.Basic
 {
-    public class AnonymousTypes
+    public class AnnonymousTypes
     {
         [Fact]
         public void should_define_data_type_without_class_definition()
         {
-            var anonymousTypeInstance = new
+            var annonymousTypeInstance = new
             {
                 FirstName = "Bill",
                 LastName = "Gates"
@@ -17,8 +17,8 @@ namespace BanKai.Basic
             const string expectedFirstName = "";
             const string expectedLastName = "";
 
-            Assert.Equal(expectedFirstName, anonymousTypeInstance.FirstName);
-            Assert.Equal(expectedLastName, anonymousTypeInstance.LastName);
+            Assert.Equal(expectedFirstName, annonymousTypeInstance.FirstName);
+            Assert.Equal(expectedLastName, annonymousTypeInstance.LastName);
         }
 
         [Fact]
@@ -26,7 +26,7 @@ namespace BanKai.Basic
         {
             const string firstName = "Bill";
 
-            var anonymousTypeInstance = new
+            var annonymousTypeInstance = new
             {
                 firstName,
                 LastName = "Gates"
@@ -36,8 +36,8 @@ namespace BanKai.Basic
             const string expectedFirstName = "";
             const string expectedLastName = "";
 
-            Assert.Equal(expectedFirstName, anonymousTypeInstance.firstName);
-            Assert.Equal(expectedLastName, anonymousTypeInstance.LastName);
+            Assert.Equal(expectedFirstName, annonymousTypeInstance.firstName);
+            Assert.Equal(expectedLastName, annonymousTypeInstance.LastName);
         }
 
         [Fact]
