@@ -57,6 +57,7 @@
     <Compile Include="21_ImplicitAndExplicitConversions.cs" />
     <Compile Include="22_ExtensionMethod.cs" />
     <Compile Include="23_AnnonymousTypes.cs" />
+    <Compile Include="24_LinqBasics.cs" />
     <Compile Include="Common\AutoPropertyDemoClass.cs" />
     <Compile Include="Common\BaseKeywordDemoClass.cs" />
     <Compile Include="Common\BasicEventDemoClass.cs" />
