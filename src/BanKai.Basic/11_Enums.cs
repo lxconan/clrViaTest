@@ -1,11 +1,11 @@
 ﻿using System;
 using BanKai.Basic.Common;
-using FluentAssertions;
 using Xunit;
 
 namespace BanKai.Basic
 {
     // ReSharper disable EqualExpressionComparison
+    // ReSharper disable HeuristicUnreachableCode
 
     public class Enums
     {
@@ -19,8 +19,8 @@ namespace BanKai.Basic
             const bool expectedResultForBottomEqualsLeft = true;
             const bool expectedResultForRightEqualsRight = false;
 
-            bottomEqualsLeft.Should().Be(expectedResultForBottomEqualsLeft);
-            rightEqualsRight.Should().Be(expectedResultForRightEqualsRight);
+            Assert.Equal(expectedResultForBottomEqualsLeft, bottomEqualsLeft);
+            Assert.Equal(expectedResultForRightEqualsRight, rightEqualsRight);
         }
 
         [Fact]
@@ -32,10 +32,10 @@ namespace BanKai.Basic
             const int topValue = int.MinValue;
             const int bottomValue = int.MinValue;
 
-            ((BorderSide) leftValue == BorderSide.Left).Should().BeTrue();
-            ((BorderSide) rightValue == BorderSide.Right).Should().BeTrue();
-            ((BorderSide) topValue == BorderSide.Top).Should().BeTrue();
-            ((BorderSide) bottomValue == BorderSide.Bottom).Should().BeTrue();
+            Assert.True((BorderSide) leftValue == BorderSide.Left);
+            Assert.True((BorderSide) rightValue == BorderSide.Right);
+            Assert.True((BorderSide) topValue == BorderSide.Top);
+            Assert.True((BorderSide) bottomValue == BorderSide.Bottom);
         }
 
         [Fact]
@@ -47,10 +47,10 @@ namespace BanKai.Basic
             const int topValue = int.MinValue;
             const int bottomValue = int.MinValue;
 
-            ((BorderSideExplicity)leftValue == BorderSideExplicity.Left).Should().BeTrue();
-            ((BorderSideExplicity)rightValue == BorderSideExplicity.Right).Should().BeTrue();
-            ((BorderSideExplicity)topValue == BorderSideExplicity.Top).Should().BeTrue();
-            ((BorderSideExplicity)bottomValue == BorderSideExplicity.Bottom).Should().BeTrue();
+            Assert.True((BorderSideExplicity)leftValue == BorderSideExplicity.Left);
+            Assert.True((BorderSideExplicity)rightValue == BorderSideExplicity.Right);
+            Assert.True((BorderSideExplicity)topValue == BorderSideExplicity.Top);
+            Assert.True((BorderSideExplicity)bottomValue == BorderSideExplicity.Bottom);
         }
 
         [Fact]
@@ -62,7 +62,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const bool expectedCompareResult = false;
 
-            differentDeclareWithSameValueCompareResult.Should().Be(expectedCompareResult);
+            Assert.Equal(expectedCompareResult, differentDeclareWithSameValueCompareResult);
         }
 
         [Fact]
@@ -74,10 +74,10 @@ namespace BanKai.Basic
             const int topValue = int.MinValue;
             const int bottomValue = int.MinValue;
 
-            ((BorderSideLayout)leftValue == BorderSideLayout.Left).Should().BeTrue();
-            ((BorderSideLayout)rightValue == BorderSideLayout.Right).Should().BeTrue();
-            ((BorderSideLayout)topValue == BorderSideLayout.Top).Should().BeTrue();
-            ((BorderSideLayout)bottomValue == BorderSideLayout.Bottom).Should().BeTrue();
+            Assert.True((BorderSideLayout)leftValue == BorderSideLayout.Left);
+            Assert.True((BorderSideLayout)rightValue == BorderSideLayout.Right);
+            Assert.True((BorderSideLayout)topValue == BorderSideLayout.Top);
+            Assert.True((BorderSideLayout)bottomValue == BorderSideLayout.Bottom);
         }
 
         [Fact]
@@ -88,7 +88,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const BorderSide expectedEnumValue = BorderSide.Left;
 
-            parsedBottomEnumValue.Should().Be(expectedEnumValue);
+            Assert.Equal(expectedEnumValue, parsedBottomEnumValue);
         }
 
         [Fact]
@@ -99,7 +99,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const BorderSide expectedEnumValue = BorderSide.Left;
 
-            parsedBottomEnumValue.Should().Be(expectedEnumValue);            
+            Assert.Equal(expectedEnumValue, parsedBottomEnumValue);
         }
 
         [Fact]
@@ -112,9 +112,10 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const bool expectedIncludeLeft = false;
 
-            includeLeft.Should().Be(expectedIncludeLeft);
+            Assert.Equal(expectedIncludeLeft, includeLeft);
         }
     }
 
+    // ReSharper restore HeuristicUnreachableCode
     // ReSharper restore EqualExpressionComparison
 }

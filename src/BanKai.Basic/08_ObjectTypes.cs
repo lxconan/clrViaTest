@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using BanKai.Basic.Common;
-using FluentAssertions;
 using Xunit;
 
 namespace BanKai.Basic
@@ -22,9 +21,15 @@ namespace BanKai.Basic
             const bool isAnnonymousInstanceObject = false;
             const bool isValueTypeInstanceObject = false;
 
-            stringInstance.GetType().IsSubclassOf(typeof(object)).Should().Be(isStringInstanceObject);
-            annonymousInstance.GetType().IsSubclassOf(typeof(object)).Should().Be(isAnnonymousInstanceObject);
-            valueTypeInstance.GetType().IsSubclassOf(typeof(object)).Should().Be(isValueTypeInstanceObject);
+            Assert.Equal(
+                isStringInstanceObject,
+                stringInstance.GetType().IsSubclassOf(typeof(object)));
+            Assert.Equal(
+                isAnnonymousInstanceObject,
+                annonymousInstance.GetType().IsSubclassOf(typeof(object)));
+            Assert.Equal(
+                isValueTypeInstanceObject,
+                valueTypeInstance.GetType().IsSubclassOf(typeof(object)));
         }
 
         [Fact]
@@ -41,9 +46,9 @@ namespace BanKai.Basic
             Type expectedTypeForItemAtPosition1 = typeof(object);
             Type expectedTypeForItemAtPosition2 = typeof(object);
 
-            itemAtPosition0.GetType().Should().Be(expectedTypeForItemAtPosition0);
-            itemAtPosition1.GetType().Should().Be(expectedTypeForItemAtPosition1);
-            itemAtPosition2.GetType().Should().Be(expectedTypeForItemAtPosition2);
+            Assert.Equal(expectedTypeForItemAtPosition0, itemAtPosition0.GetType());
+            Assert.Equal(expectedTypeForItemAtPosition1, itemAtPosition1.GetType());
+            Assert.Equal(expectedTypeForItemAtPosition2, itemAtPosition2.GetType());
         }
 
         [Fact]
@@ -58,12 +63,15 @@ namespace BanKai.Basic
             const bool isDateTimeObjectValueType = false;
             const bool isCustomValueTypeObjectValueType = false;
 
-            intObject.GetType()
-                .IsSubclassOf(typeof(ValueType)).Should().Be(isIntObjectValueType);
-            dateTimeObject.GetType()
-                .IsSubclassOf(typeof(ValueType)).Should().Be(isDateTimeObjectValueType);
-            customValueTypeObject.GetType()
-                .IsSubclassOf(typeof(ValueType)).Should().Be(isCustomValueTypeObjectValueType);
+            Assert.Equal(
+                isIntObjectValueType, 
+                intObject.GetType().IsSubclassOf(typeof(ValueType)));
+            Assert.Equal(
+                isDateTimeObjectValueType,
+                dateTimeObject.GetType().IsSubclassOf(typeof(ValueType)));
+            Assert.Equal(
+                isCustomValueTypeObjectValueType,
+                customValueTypeObject.GetType().IsSubclassOf(typeof(ValueType)));
         }
 
         [Fact]
@@ -74,7 +82,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const bool isValueTypeSealed = false;
 
-            customValueTypeObject.GetType().IsSealed.Should().Be(isValueTypeSealed);
+            Assert.Equal(isValueTypeSealed, customValueTypeObject.GetType().IsSealed);
         }
 
         [Fact]
@@ -96,7 +104,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             const bool expectedIsSameReference = true;
 
-            isSameReference.Should().Be(expectedIsSameReference);
+            Assert.Equal(expectedIsSameReference, isSameReference);
         }
 
         [Fact]
@@ -110,9 +118,9 @@ namespace BanKai.Basic
             const bool isBoxedTypeSealed = false;
             const bool isValueType = false;
 
-            boxed.GetType().Should().Be(expectedType);
-            boxed.GetType().IsSealed.Should().Be(isBoxedTypeSealed);
-            boxed.GetType().IsValueType.Should().Be(isValueType);
+            Assert.Equal(expectedType, boxed.GetType());
+            Assert.Equal(isBoxedTypeSealed, boxed.GetType().IsSealed);
+            Assert.Equal(isValueType, boxed.GetType().IsValueType);
         }
 
         [Fact]
@@ -137,9 +145,9 @@ namespace BanKai.Basic
             Type expectedExceptionType = typeof(Exception);
             const long expectedLongObjectValue = 1L;
 
-            (errorWhenCasting == null).Should().Be(isExceptionOccurred);
-            errorWhenCasting.GetType().Should().Be(expectedExceptionType);
-            longObject.Should().Be(expectedLongObjectValue);
+            Assert.Equal(isExceptionOccurred, (errorWhenCasting == null));
+            Assert.Equal(expectedExceptionType, errorWhenCasting.GetType());
+            Assert.Equal(expectedLongObjectValue, longObject);
         }
 
         [Fact]
@@ -153,7 +161,7 @@ namespace BanKai.Basic
             // change the variable value to fix the test.
             Type expectedType = typeof(InheritMemberAccessDemoBaseClass);
 
-            type.Should().Be(expectedType);
+            Assert.Equal(expectedType, type);
         }
 
         [Fact]
@@ -165,7 +173,8 @@ namespace BanKai.Basic
             const string expectedToStringResult = "";
 
             string toStringResult = objectWithoutToStringOverride.ToString();
-            toStringResult.Should().Be(expectedToStringResult);
+
+            Assert.Equal(expectedToStringResult, toStringResult);
         }
     }
 

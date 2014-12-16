@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using FluentAssertions;
 using Xunit;
 
 namespace BanKai.Basic
@@ -19,7 +18,7 @@ namespace BanKai.Basic
             // change "default(string)" to correct value.
             const string expectedResult = default(string);
 
-            (title + name).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (title + name));
         }
 
         [Fact]
@@ -31,7 +30,7 @@ namespace BanKai.Basic
             var builder = new StringBuilder();
             // add at most 2 lines of code here concating variable "title" and "name".
 
-            builder.ToString().Should().Be("Mr. Hall");
+            Assert.Equal("Mr. Hall", builder.ToString());
         }
 
         [Fact]
@@ -44,8 +43,8 @@ namespace BanKai.Basic
             const string expectedOrignalString = "";
             const string expectedReplacement = "";
             
-            originalString.Should().Be(expectedOrignalString);
-            replacement.Should().Be(expectedReplacement);
+            Assert.Equal(expectedOrignalString, originalString);
+            Assert.Equal(expectedReplacement, replacement);
         }
 
         [Fact]
@@ -57,7 +56,7 @@ namespace BanKai.Basic
             // change "" in the following line to correct value.
             const string expectedResult = "";
 
-            builder.ToString().Should().Be(expectedResult);
+            Assert.Equal(expectedResult, builder.ToString());
         }
 
         [Fact]
@@ -69,7 +68,7 @@ namespace BanKai.Basic
             // change "default(char)" to correct value.
             const char expectedResult = default (char);
 
-            characterAtIndex2.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, characterAtIndex2);
         }
 
         [Fact]
@@ -81,7 +80,7 @@ namespace BanKai.Basic
             // change "default(bool)" to correct value.
             const bool expectedResult = default(bool);
 
-            (str == equivalent).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (str == equivalent));
         }
 
         [Fact]
@@ -94,8 +93,8 @@ namespace BanKai.Basic
             var caseSensitiveComparison = StringComparison.InvariantCultureIgnoreCase;
             var caseInsensitiveComparison = StringComparison.InvariantCulture;
 
-            (originalString.Equals(inDifferentCase, caseSensitiveComparison)).Should().BeFalse();
-            (originalString.Equals(inDifferentCase, caseInsensitiveComparison)).Should().BeTrue();
+            Assert.False(originalString.Equals(inDifferentCase, caseSensitiveComparison));
+            Assert.False(originalString.Equals(inDifferentCase, caseInsensitiveComparison));
         }
     }
 

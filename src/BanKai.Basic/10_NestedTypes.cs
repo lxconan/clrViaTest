@@ -1,6 +1,5 @@
 ﻿using System;
 using BanKai.Basic.Common;
-using FluentAssertions;
 using Xunit;
 
 namespace BanKai.Basic
@@ -17,7 +16,7 @@ namespace BanKai.Basic
             // correct the value of expectedFullName to fix the test.
             const string expectedFullName = "BanKai.Basic.Common.NestedTypeDemoClass.NestedType";
 
-            fullName.Should().Be(expectedFullName);
+            Assert.Equal(expectedFullName, fullName);
         }
     }
 }

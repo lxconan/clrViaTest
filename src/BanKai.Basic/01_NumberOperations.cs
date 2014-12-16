@@ -1,5 +1,5 @@
 ﻿using System;
-using FluentAssertions;
+using System.Runtime;
 using Xunit;
 
 namespace BanKai.Basic
@@ -16,7 +16,7 @@ namespace BanKai.Basic
             // change "default(sbyte)" to correct value. You should not explicitly write -128.
             sbyte minimum = default(sbyte);
 
-            minimum.Should().Be(-128);
+            Assert.Equal(-128, minimum);
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should not explicitly write 2147483647.
             int maximum = default(int);
 
-            maximum.Should().Be(2147483647);
+            Assert.Equal(2147483647, maximum);
         }
 
         [Fact]
@@ -34,8 +34,8 @@ namespace BanKai.Basic
             // change "typeof(string)" to correct type.
             Type guessTheType = typeof (string);
 
-            1.0.GetType().Should().Be(guessTheType);
-            1E3.GetType().Should().Be(guessTheType);
+            Assert.Equal(guessTheType, 1.0.GetType());
+            Assert.Equal(guessTheType, 1E3.GetType());
         }
 
         [Fact]
@@ -44,8 +44,8 @@ namespace BanKai.Basic
             // change "typeof(string)" to correct type.
             Type guessTheType = typeof (string);
 
-            1.GetType().Should().Be(guessTheType);
-            0x123.GetType().Should().Be(guessTheType);
+            Assert.Equal(guessTheType, 1.GetType());
+            Assert.Equal(guessTheType, 0x123.GetType());
         }
 
         [Fact]
@@ -54,7 +54,7 @@ namespace BanKai.Basic
             // change "typeof(string)" to correct type.
             Type guessTheType = typeof (string);
 
-            1M.GetType().Should().Be(guessTheType);
+            Assert.Equal(guessTheType, 1M.GetType());
         }
 
         [Fact]
@@ -63,7 +63,7 @@ namespace BanKai.Basic
             // change "typeof(string)" to correct type.
             Type guessTheType = typeof (string);
 
-            5L.GetType().Should().Be(guessTheType);
+            Assert.Equal(guessTheType, 5L.GetType());
         }
 
         [Fact]
@@ -72,7 +72,7 @@ namespace BanKai.Basic
             // change "typeof(string)" to correct type.
             Type guessTheType = typeof (string);
 
-            5F.GetType().Should().Be(guessTheType);
+            Assert.Equal(guessTheType, 5F.GetType());
         }
 
         [Fact]
@@ -84,7 +84,7 @@ namespace BanKai.Basic
             // change "default(long)" to correct value.
             const long expectedResult = default(long);
 
-            longNumber.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, longNumber);
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace BanKai.Basic
             // change "default(short)" to correct value.
             const short expectedResult = default(short);
 
-            shortNumber.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, shortNumber);
         }
 
         [Fact]
@@ -108,7 +108,7 @@ namespace BanKai.Basic
             // change "default(byte)" to correct value.
             const byte expectedResult = default(byte);
 
-            byteNumber.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, byteNumber);
         }
 
         [Fact]
@@ -121,7 +121,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
             const int expectedResult = default (int);
 
-            castedBackNumber.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, castedBackNumber);
         }
 
         [Fact]
@@ -134,7 +134,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
             const int expectedResult = default(int);
 
-            castedBackNumber.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, castedBackNumber);
         }
 
         [Fact]
@@ -146,7 +146,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
             const int expectedResult = default (int);
 
-            suffixIncrementalReturnValue.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, suffixIncrementalReturnValue);
         }
 
         [Fact]
@@ -158,7 +158,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
             const int expectedResult = default(int);
 
-            prefixIncrementalReturnValue.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, prefixIncrementalReturnValue);
         }
 
         [Fact]
@@ -170,9 +170,9 @@ namespace BanKai.Basic
             // change "typeof(ArgumentException)" to correct exception type.
             Type desiredExceptionType = typeof(ArgumentException);
 
-            desiredExceptionType.Should().NotBe(typeof(ArithmeticException));
-            desiredExceptionType.Should().NotBe(typeof(SystemException));
-            desiredExceptionType.Should().NotBe(typeof(Exception));
+            Assert.NotEqual(typeof(ArithmeticException), desiredExceptionType);
+            Assert.NotEqual(typeof(SystemException), desiredExceptionType);
+            Assert.NotEqual(typeof(Exception), desiredExceptionType);
             Assert.Throws(desiredExceptionType, () => numerator / denominator);
         }
 
@@ -185,7 +185,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value.
             const int expectedResult = default(int);
 
-            minimumValue.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, minimumValue);
         }
 
         [Fact]
@@ -195,10 +195,10 @@ namespace BanKai.Basic
 
             // change "typeof(ArgumentException)" to correct exception type.
             Type desiredExceptionType = typeof(ArgumentException);
-            
-            desiredExceptionType.Should().NotBe(typeof(ArithmeticException));
-            desiredExceptionType.Should().NotBe(typeof(SystemException));
-            desiredExceptionType.Should().NotBe(typeof(Exception));
+
+            Assert.NotEqual(typeof(ArithmeticException), desiredExceptionType);
+            Assert.NotEqual(typeof(SystemException), desiredExceptionType);
+            Assert.NotEqual(typeof(Exception), desiredExceptionType);
 
             Assert.Throws(desiredExceptionType, () => { checked { --minimumValue; } });
         }
@@ -209,7 +209,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default (int);
 
-            (~0xf).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, ~0xf);
         }
 
         [Fact]
@@ -218,7 +218,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default(int);
 
-            (0xf0 & 0x33).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (0xf0 & 0x33));
         }
 
         [Fact]
@@ -227,7 +227,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default(int);
 
-            (0xf0 | 0x33).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (0xf0 | 0x33));
         }
 
         [Fact]
@@ -236,7 +236,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default(int);
 
-            (0xff00 ^ 0x0ff0).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (0xff00 ^ 0x0ff0));
         }
 
         [Fact]
@@ -245,7 +245,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default(int);
 
-            (0x20 << 2).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (0x20 << 2));
         }
 
         [Fact]
@@ -254,7 +254,7 @@ namespace BanKai.Basic
             // change "default(int)" to correct value. You should use Hex representation.
             const int expectedResult = default(int);
 
-            (0x20 >> 1).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (0x20 >> 1));
         }
 
         [Fact]
@@ -267,7 +267,7 @@ namespace BanKai.Basic
             // change "typeof(short)" to correct type.
             Type expectedResult = typeof(short);
 
-            arithmeticOperatorResultType.Should().Be(expectedResult);
+            Assert.Equal(expectedResult, arithmeticOperatorResultType);
         }
 
         [Fact]
@@ -279,7 +279,7 @@ namespace BanKai.Basic
             // change "default(double)" to correct value.
             const double expectedResult = default(double);
 
-            (numerator / denominator).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (numerator / denominator));
         }
 
         [Fact]
@@ -290,7 +290,7 @@ namespace BanKai.Basic
 
             const double expectedResult = default(double);
 
-            (numerator / denominator).Should().Be(expectedResult);
+            Assert.Equal(expectedResult, (numerator / denominator));
         }
     }
 

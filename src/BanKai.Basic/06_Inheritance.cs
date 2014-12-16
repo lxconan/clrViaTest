@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using BanKai.Basic.Common;
-using FluentAssertions;
 using Xunit;
 
 namespace BanKai.Basic
@@ -19,7 +18,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            demoClass.PublicProperty.Should().Be(expected);
+            Assert.Equal(expected, demoClass.PublicProperty);
         }
 
         [Fact]
@@ -32,7 +31,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.            
             const string expected = "";
 
-            actualValue.Should().Be(expected);
+            Assert.Equal(expected, actualValue);
         }
 
         [Fact]
@@ -46,7 +45,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            actualValue.Should().Be(expected);
+            Assert.Equal(expected, actualValue);
         }
 
         [Fact]
@@ -60,7 +59,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const bool expected = true;
 
-            isNull.Should().Be(expected);
+            Assert.Equal(expected, isNull);
         }
 
         [Fact]
@@ -75,7 +74,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const bool expected = false;
 
-            isNull.Should().Be(expected);
+            Assert.Equal(expected, isNull);
         }
 
         [Fact]
@@ -87,8 +86,9 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             Type expectedExceptionType = typeof(ArgumentException);
 
-            expectedExceptionType.Should().NotBe(typeof(SystemException));
-            expectedExceptionType.Should().NotBe(typeof(Exception));
+            Assert.NotEqual(typeof(SystemException), expectedExceptionType);
+            Assert.NotEqual(typeof(Exception), expectedExceptionType);
+
             Assert.Throws(expectedExceptionType, () => (StringBuilder) castToObject);
         }
 
@@ -114,8 +114,9 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             Type expectedExceptionType = typeof(ArgumentException);
 
-            expectedExceptionType.Should().NotBe(typeof(SystemException));
-            expectedExceptionType.Should().NotBe(typeof(Exception));
+            Assert.NotEqual(typeof(SystemException), expectedExceptionType);
+            Assert.NotEqual(typeof(Exception), expectedExceptionType);
+
             Assert.Throws(expectedExceptionType, () => (PolymorphismDemoClass)demoClassBase);
         }
 
@@ -132,8 +133,8 @@ namespace BanKai.Basic
             const string expectedMethodReturnValue = "";
             const string expectedBaseClassMethodReturnValue = "";
 
-            methodReturnValue.Should().Be(expectedMethodReturnValue);
-            baseClassMethodReturnValue.Should().Be(expectedBaseClassMethodReturnValue);
+            Assert.Equal(expectedMethodReturnValue, methodReturnValue);
+            Assert.Equal(expectedBaseClassMethodReturnValue, baseClassMethodReturnValue);
         }
 
         [Fact]
@@ -146,7 +147,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            name.Should().Be(expected);
+            Assert.Equal(expected, name);
         }
 
         [Fact]
@@ -159,7 +160,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            message.Should().Be(expected);
+            Assert.Equal(expected, message);
         }
 
         [Fact]
@@ -172,7 +173,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            message.Should().Be(expected);
+            Assert.Equal(expected, message);
         }
 
         [Fact]
@@ -185,7 +186,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            message.Should().Be(expected);
+            Assert.Equal(expected, message);
         }
 
         [Fact]
@@ -198,7 +199,7 @@ namespace BanKai.Basic
             // please change the variable value to fix the test.
             const string expected = "";
 
-            message.Should().Be(expected);
+            Assert.Equal(expected, message);
         }
 
         [Fact]
@@ -217,9 +218,9 @@ namespace BanKai.Basic
             const string expectedDerivedClassOverloadingValue = "";
             const string expectedCastOverloadingValue = "";
 
-            returnValueForBaseClassOverloading.Should().Be(expectedBaseClassOverloadingValue);
-            returnValueForDerivedClassOverloading.Should().Be(expectedDerivedClassOverloadingValue);
-            returnValueForCastingOverloading.Should().Be(expectedCastOverloadingValue);
+            Assert.Equal(expectedBaseClassOverloadingValue, returnValueForBaseClassOverloading);
+            Assert.Equal(expectedDerivedClassOverloadingValue, returnValueForDerivedClassOverloading);
+            Assert.Equal(expectedCastOverloadingValue, returnValueForCastingOverloading);
         }
     }
 
