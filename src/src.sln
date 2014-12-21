@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanKai.Basic", "BanKai.Basic\BanKai.Basic.csproj", "{9769FBE8-6598-45BB-B550-AAAA4D140E40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanKai.Advantage.Linqs", "BanKai.Advantage.Linqs\BanKai.Advantage.Linqs.csproj", "{F9829D29-B00A-4DFB-954D-CFE1691899F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanKai.Progress.LinqRelated", "BanKai.Progress.LinqRelated\BanKai.Progress.LinqRelated.csproj", "{BC8297B7-4F46-4A1F-B8B0-A755CE5E9B81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9769FBE8-6598-45BB-B550-AAAA4D140E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9769FBE8-6598-45BB-B550-AAAA4D140E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9769FBE8-6598-45BB-B550-AAAA4D140E40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9829D29-B00A-4DFB-954D-CFE1691899F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9829D29-B00A-4DFB-954D-CFE1691899F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9829D29-B00A-4DFB-954D-CFE1691899F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9829D29-B00A-4DFB-954D-CFE1691899F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8297B7-4F46-4A1F-B8B0-A755CE5E9B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8297B7-4F46-4A1F-B8B0-A755CE5E9B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8297B7-4F46-4A1F-B8B0-A755CE5E9B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8297B7-4F46-4A1F-B8B0-A755CE5E9B81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
