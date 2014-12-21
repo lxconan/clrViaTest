@@ -26,9 +26,9 @@ namespace BanKai.Basic
             Exception error = getCurrentValueWithoutMoveNext.RunAndGetUnhandledException();
 
             // change the variable value to fix the test.
-            Exception expectedUnhandledError = null;
+            Type expectedExceptionType = typeof(Exception);
 
-            Assert.Equal(expectedUnhandledError, error);
+            Assert.Equal(expectedExceptionType, error.GetType());
         }
 
         [Fact]
