@@ -42,6 +42,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="01_CreatingObject\01_CreatingObjectUsingNew.cs" />
+    <Compile Include="01_CreatingObject\02_CreatingObjectUsingFactory.cs" />
+    <Compile Include="01_CreatingObject\Common\Duck.cs" />
+    <Compile Include="01_CreatingObject\Common\Fly.cs" />
+    <Compile Include="01_CreatingObject\Common\IFlyBehavior.cs" />
+    <Compile Include="01_CreatingObject\Common\IQuackBehavior.cs" />
+    <Compile Include="01_CreatingObject\Common\NoFly.cs" />
+    <Compile Include="01_CreatingObject\Common\Quack.cs" />
+    <Compile Include="01_CreatingObject\Common\Squeak.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
