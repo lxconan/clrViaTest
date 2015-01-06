@@ -1,0 +1,14 @@
+﻿Good job! You have finished a really complicated question.
+
+The object is first created using the new operator. Then we encapsulate them to factory method. And finally we use ContainerBuilder to define object creating logic and we use ILifetimeObject to resolve object and control its lifetime.
+
+The final version of the test is very closed to a real IoC (inversion-of-control) container which is introduced with the term "Dependency-Injection". If you use AutoFac (one of the wellknown IoC library for .NET, official site: http://autofac.org), you gonna be familiar with the code. The dependency injection is complicated because it comes up with a bunch of terms like "container", "life time scope", "nested scope". But if you would like to get a very basic explain, here it is:
+
+> When you go and get things out of the refrigerator for yourself, you can cause problems. You might leave the door open, you might get something Mommy or Daddy doesn't want you to have. You might even be looking for something we don't even have or which has expired.
+> What you should be doing is stating a need, "I need something to drink with lunch," and then we will make sure you have something when you sit down to eat.
+
+If you want to know more about dependency injection and IoC container, please refer to the following resources.
+
+[1] http://www.theserverside.com/news/1321158/A-beginners-guide-to-Dependency-Injection. This article has an easy-to-understand explain at the begining part.
+[2] http://martinfowler.com/articles/injection.html. By Martin Fowler.
+[3] http://files.cnblogs.com/xupng/IoC容器和DependencyInjection模式.pdf. Chinese version of [2].

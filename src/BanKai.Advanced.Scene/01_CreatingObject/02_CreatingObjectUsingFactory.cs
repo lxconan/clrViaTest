@@ -11,29 +11,22 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
             public Duck Create(string duckType)
             {
                 // However, things are most likely to be changed in the future.
-                // So using new operator is not easy to maintain. Instead, we
-                // can use factory method to create object.
+                // So using new operator is not easy to maintain. (e.g. If the 
+                // creating operation changed, we have to update all the 
+                // new operations.) Instead, we can use factory method to 
+                // create an object.
                 //
                 // Requirement: implement Create(string) method and returns
                 // correct instance according to duckType passed. You can only
                 // write your implementation in DuckFactory.Create(string)
                 // method. No 3rd party library is allowed to import here.
 
-                throw new NotImplementedException();
+                throw new NotImplementedException(
+                    "Please delete this statement and add your implementation here.");
             }
         }
 
         private readonly DuckFactory m_duckFactory = new DuckFactory();
-
-        internal Duck CreateRedHeadDuck()
-        {
-            return m_duckFactory.Create("Red Head Duck");
-        }
-
-        internal Duck CreateModelDuck()
-        {
-            return m_duckFactory.Create("Model Duck");
-        }
 
         [Fact]
         public void Run()
@@ -44,20 +37,20 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void CheckRedHeadDuck()
         {
-            Duck readHeadDuck = CreateRedHeadDuck();
+            Duck redHeadDuck = m_duckFactory.Create("Red Head Duck");
 
             const string expectedMessage =
                 "Red Head Duck can fly. And when it quacks, it says Squeak. ";
-            Assert.Equal(expectedMessage, readHeadDuck.ToString());
+            Assert.Equal(expectedMessage, redHeadDuck.ToString());
         }
 
         private void CheckModelDuck()
         {
-            Duck readHeadDuck = CreateModelDuck();
+            Duck modelDuck = m_duckFactory.Create("Model Duck");
 
             const string expectedMessage =
                 "Model Duck cannot fly. And when it quacks, it says Quack. ";
-            Assert.Equal(expectedMessage, readHeadDuck.ToString());
+            Assert.Equal(expectedMessage, modelDuck.ToString());
         }
     }
 }

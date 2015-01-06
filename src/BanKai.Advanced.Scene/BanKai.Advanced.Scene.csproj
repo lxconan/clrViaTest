@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="01_CreatingObject\01_CreatingObjectUsingNew.cs" />
     <Compile Include="01_CreatingObject\02_CreatingObjectUsingFactory.cs" />
+    <Compile Include="01_CreatingObject\03_ChangeTheSignatureOfTheFactory.cs" />
+    <Compile Include="01_CreatingObject\04_IsolateDefinitionAndCreatingLogic.cs" />
+    <Compile Include="01_CreatingObject\05_SupportSingletonOfCreatedObjects.cs" />
+    <Compile Include="01_CreatingObject\06_SupportCreatingOptions.cs" />
     <Compile Include="01_CreatingObject\Common\Duck.cs" />
     <Compile Include="01_CreatingObject\Common\Fly.cs" />
     <Compile Include="01_CreatingObject\Common\IFlyBehavior.cs" />
@@ -55,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="01_CreatingObject\07_Congratulations.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

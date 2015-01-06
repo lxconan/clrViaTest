@@ -10,28 +10,25 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
         {
             // There is only one way to create object in C# -- the new operator.
             // In this practice, I would like to create a "Red Head Duck"
-            // instance.
+            // instance using new operator.
             //
             // Requirement: Please create a "Red Head Duck" instance using new
-            // operator. You can only write your implementation in 
-            // CreateRedHeadDuck() method.
-            //
-            // You cannot add any 3rd party library into the project.
-            // 
-            // Hint: The duck is composited with different behaviors. And the 
-            // desired behavior is defined in Run() method. 
+            // operator and pass the test. You can only write your implementation
+            // in CreateRedHeadDuck() method. You cannot add any 3rd party 
+            // library into the project.
 
-            throw new NotImplementedException();
+            throw new NotImplementedException(
+                "Please delete this statement and add your implementation here.");
         }
 
         [Fact]
         public void Run()
         {
-            Duck readHeadDuck = CreateRedHeadDuck();
+            Duck redHeadDuck = CreateRedHeadDuck();
 
             const string expectedMessage =
                 "Red Head Duck can fly. And when it quacks, it says Squeak. ";
-            Assert.Equal(expectedMessage, readHeadDuck.ToString());
+            Assert.Equal(expectedMessage, redHeadDuck.ToString());
         }
     }
 }
