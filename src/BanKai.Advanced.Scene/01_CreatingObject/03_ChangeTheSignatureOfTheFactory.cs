@@ -6,7 +6,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 {
     public class ChangeTheSignatureOfTheFactory
     {
-        private class Container
+        private class UniversalFactory
         {
             public T Resolve<T>(string hint = null)
             {
@@ -30,7 +30,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
                 // We would like to use the same way to creating those objects.
                 // We do not want to create hundreds of thousands of Factories
                 // because there are so many types to create. So we would like
-                // to create a universal Factroy called Container.
+                // to create a universal Factroy.
                 //
                 // Requirement: complete Resolve<T>(string) method and returns
                 // correct instance. You can only write your implementation in
@@ -42,7 +42,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
             }
         }
 
-        private readonly Container m_container = new Container();
+        private readonly UniversalFactory m_universalFactory = new UniversalFactory();
 
         [Fact]
         public void Run()
@@ -53,7 +53,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void CheckRedHeadDuck()
         {
-            var redHeadDuck = m_container.Resolve<Duck>("Red Head Duck");
+            var redHeadDuck = m_universalFactory.Resolve<Duck>("Red Head Duck");
 
             const string expectedMessage =
                 "Red Head Duck can fly. And when it quacks, it says Squeak. ";
@@ -62,7 +62,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void CheckModelDuck()
         {
-            var modelDuck = m_container.Resolve<Duck>("Model Duck");
+            var modelDuck = m_universalFactory.Resolve<Duck>("Model Duck");
 
             const string expectedMessage =
                 "Model Duck cannot fly. And when it quacks, it says Quack. ";

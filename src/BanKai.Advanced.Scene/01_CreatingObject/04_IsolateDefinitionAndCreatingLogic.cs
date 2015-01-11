@@ -40,12 +40,12 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
             }
         }
 
-        private class Container
+        private class UniversalFactory
         {
             private readonly Dictionary<TypeContext, Delegate> m_creatingLogics
                 = new Dictionary<TypeContext, Delegate>();
 
-            public void Register<T>(Func<Container, T> howToCreateMe, string hint = null)
+            public void Register<T>(Func<UniversalFactory, T> howToCreateMe, string hint = null)
             {
                 // Writing all the creating logic in Resolve<T>(string) is not 
                 // a good idea. Because we have to update the method everytime
@@ -63,12 +63,12 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
             public T Resolve<T>(string hint = null)
             {
-                Func<Container, T> creatingLogic;
+                Func<UniversalFactory, T> creatingLogic;
                     
                 try
                 {
                     creatingLogic =
-                        (Func<Container, T>) m_creatingLogics[new TypeContext(typeof (T), hint)];
+                        (Func<UniversalFactory, T>) m_creatingLogics[new TypeContext(typeof (T), hint)];
                 }
                 catch (KeyNotFoundException error)
                 {
@@ -83,19 +83,19 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
             }
         }
 
-        private readonly Container m_container = new Container();
+        private readonly UniversalFactory m_universalFactory = new UniversalFactory();
 
         [Fact]
         public void Run()
         {
-            m_container.Register(c => new Fly());
-            m_container.Register(c => new NoFly());
-            m_container.Register(c => new Quack());
-            m_container.Register(c => new Squeak());
-            m_container.Register(
+            m_universalFactory.Register(c => new Fly());
+            m_universalFactory.Register(c => new NoFly());
+            m_universalFactory.Register(c => new Quack());
+            m_universalFactory.Register(c => new Squeak());
+            m_universalFactory.Register(
                 c => new Duck("Red Head Duck", c.Resolve<Fly>(), c.Resolve<Squeak>()),
                 "Red Head Duck");
-            m_container.Register(
+            m_universalFactory.Register(
                 c => new Duck("Model Duck", c.Resolve<NoFly>(), c.Resolve<Quack>()),
                 "Model Duck");
 
@@ -105,7 +105,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void CheckRedHeadDuck()
         {
-            var redHeadDuck = m_container.Resolve<Duck>("Red Head Duck");
+            var redHeadDuck = m_universalFactory.Resolve<Duck>("Red Head Duck");
 
             const string expectedMessage =
                 "Red Head Duck can fly. And when it quacks, it says Squeak. ";
@@ -114,7 +114,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void CheckModelDuck()
         {
-            var modelDuck = m_container.Resolve<Duck>("Model Duck");
+            var modelDuck = m_universalFactory.Resolve<Duck>("Model Duck");
 
             const string expectedMessage =
                 "Model Duck cannot fly. And when it quacks, it says Quack. ";

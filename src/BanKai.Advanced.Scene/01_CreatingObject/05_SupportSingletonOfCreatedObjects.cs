@@ -10,14 +10,15 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
     // code. Besides, please modify existed source code as few as
     // possible.
     //
-    // We have implemented a pretty container with registration and
+    // We have implemented a pretty factory with registration and
     // resolving functions. Now we want to control the lifetime 
     // of the created object. A lifetime controller is another object.
     // When the lifetime controller object is disposed, all objects
     // resolved by it will be disposed (if they implement IDisposable).
     // We can discover that the lifetime controller is the proper
     // type to resolve object and the container is just a definition
-    // holder, so we just remove the resolve method from the container.
+    // holder, so we just remove the resolve method from the universal
+    // factory.
     //
     // Requirement: Implement life time object support.
 
@@ -83,7 +84,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
             }
         }
 
-        private class Container
+        private class UniversalFactory
         {
             private readonly Dictionary<TypeContext, Delegate> m_creatingLogics
                 = new Dictionary<TypeContext, Delegate>();
@@ -118,15 +119,15 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private void RegressionCheckInjection()
         {
-            var containerBuilder = new Container();
-            containerBuilder.Register(
+            var universalFactory = new UniversalFactory();
+            universalFactory.Register(
                 c => new Duck("Red Head Duck", c.Resolve<Fly>(), c.Resolve<Squeak>()),
                 "Red Head Duck");
-            containerBuilder.Register(c => new Fly());
-            containerBuilder.Register(c => new Squeak());
-            containerBuilder.Register(c => new TestingObject());
+            universalFactory.Register(c => new Fly());
+            universalFactory.Register(c => new Squeak());
+            universalFactory.Register(c => new TestingObject());
 
-            ILifetimeObject container = containerBuilder.CreateLifetimeObject();
+            ILifetimeObject container = universalFactory.CreateLifetimeObject();
             var duck = container.Resolve<Duck>("Red Head Duck");
 
             const string expectedMessage =
@@ -136,7 +137,7 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
 
         private static void CheckLifetimeObject()
         {
-            var container = new Container();
+            var container = new UniversalFactory();
             container.Register(c => new TestingObject());
 
             ILifetimeObject lifetimeObject = container.CreateLifetimeObject();

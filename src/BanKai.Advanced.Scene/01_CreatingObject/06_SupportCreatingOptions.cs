@@ -11,14 +11,14 @@ namespace BanKai.Advanced.Scene._01_CreatingObject
     // related source code. Besides, please modify existed source code 
     // as few as possible.
     //
-    // Now the container becomes more and more functional.
+    // Now the universal factory becomes more and more functional.
     // In this practice, we would like to add more control on object
     // creating. We want to resolve the same object if we define 
     // the object instantiating type as singleton. 
     // 
-    // You may have notice that the name of the container class has been
-    // changed. That's because since the container is only used for 
-    // defining creating logic, we rename it from Container to 
+    // You may have notice that the name of the universal factory class 
+    // has been changed. That's because since the factory is only used for 
+    // defining creating logic, we rename it from UniversalFactory to 
     // ContainerBuilder.
     //
     // Requirement: Implement pre-call creation and singleton creation,
