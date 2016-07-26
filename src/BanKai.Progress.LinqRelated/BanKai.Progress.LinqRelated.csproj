@@ -38,10 +38,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01_RestrictionOperator\01_BasicWhereFiltering.cs" />
-    <Compile Include="02_ProjectionOperator\01_SelectOperator.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\EmployeeRepository.cs" />
+    <Compile Include="Mixed\CollectEvenNumber.cs" />
+    <Compile Include="Mixed\EvenNumberSequence.cs" />
+    <Compile Include="Mixed\MakeIntersection.cs" />
+    <Compile Include="Mixed\LastElement.cs" />
+    <Compile Include="Mixed\NumberSequence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
