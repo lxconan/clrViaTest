@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace BanKai.Progress.LinqRelated.Mixed
+namespace BanKai.Progress.LinqRelated
 {
     public class EvenNumberSequence
     {

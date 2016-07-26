@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace BanKai.Progress.LinqRelated.Mixed
+namespace BanKai.Progress.LinqRelated
 {
     public class MakeIntersection
     {
@@ -10,12 +10,12 @@ namespace BanKai.Progress.LinqRelated.Mixed
         {
             int[] collectionA = { 10, 27, 28, 19, 5 };
             int[] collectionB = { 5, 78, 28, 19, 23 };
-            int[] intersection = { 5, 28, 19 };
+            int[] intersection = { 19, 28, 5 };
 
-            Assert.Equal(intersection, GetIntersection(collectionA, collectionB));
+            Assert.Equal(intersection, GetIntersectionAndSort(collectionA, collectionB));
         }
 
-        static IEnumerable<int> GetIntersection(IEnumerable<int> c1, IEnumerable<int> c2)
+        static IEnumerable<int> GetIntersectionAndSort(IEnumerable<int> c1, IEnumerable<int> c2)
         {
             throw new System.NotImplementedException();
         }

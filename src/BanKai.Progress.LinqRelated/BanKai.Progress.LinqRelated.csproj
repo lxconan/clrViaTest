@@ -38,11 +38,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mixed\CollectEvenNumber.cs" />
-    <Compile Include="Mixed\EvenNumberSequence.cs" />
-    <Compile Include="Mixed\MakeIntersection.cs" />
-    <Compile Include="Mixed\LastElement.cs" />
-    <Compile Include="Mixed\NumberSequence.cs" />
+    <Compile Include="DividableInteger.cs" />
+    <Compile Include="FlatenMultidimensionalArray.cs" />
+    <Compile Include="AverageForList.cs" />
+    <Compile Include="FlattenIntersectionFacts.cs" />
+    <Compile Include="GenerateSequenceIntervalFacts.cs" />
+    <Compile Include="GroupingNumbers.cs" />
+    <Compile Include="MapToEven.cs" />
+    <Compile Include="MultiplesOfThree.cs" />
+    <Compile Include="CollectEvenNumber.cs" />
+    <Compile Include="EvenNumberSequence.cs" />
+    <Compile Include="MakeIntersection.cs" />
+    <Compile Include="LastElement.cs" />
+    <Compile Include="NumberSequence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
