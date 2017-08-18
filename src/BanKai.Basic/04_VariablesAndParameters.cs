@@ -56,10 +56,11 @@ namespace BanKai.Basic
         public void should_get_copy_of_the_argument_when_passing_by_value_for_ref_type()
         {
             var refTypeObject = new RefTypeClass(1);
-            RefTypeClass modifiedRefTypeObject = FunctionPassingRefTypeClassAsArgument(refTypeObject);
+            var originalRefTypeObject = refTypeObject;
+            FunctionPassingRefTypeClassAsArgument(refTypeObject);
 
             // change the variable value to correct one.
-            RefTypeClass expectedResult = modifiedRefTypeObject;
+            RefTypeClass expectedResult = null;
 
             Assert.Same(expectedResult, refTypeObject);
         }
